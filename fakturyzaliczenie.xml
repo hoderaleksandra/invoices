@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="fakturyzaliczenie.xsl"?>
+
+<!DOCTYPE faktury[
+<!ELEMENT faktury (faktura*) >
+<!ELEMENT faktura (nrzamowienia, datazamowienia, datawystawienia, fakturaVAT, (sprzedawca*), (nabywca*), (dostawca*), (zamowienie*))>
+<!ELEMENT nrzamowienia (#PCDATA) >
+<!ELEMENT datazamowienia (#PCDATA) >
+<!ELEMENT datawystawienia (#PCDATA) >
+<!ELEMENT fakturaVAT (#PCDATA) >
+<!ELEMENT sprzedawca (nazwa, (adres*), nrnip) >
+<!ELEMENT nazwa (#PCDATA) >
+<!ELEMENT adres ( ulica?, nrbudynku, nrlokalu?, kod, miejscowosc)>
+<!ELEMENT ulica (#PCDATA) >
+<!ELEMENT nrbudynku (#PCDATA) >
+<!ELEMENT nrlokalu (#PCDATA) >
+<!ELEMENT kod (#PCDATA) >
+<!ELEMENT miejscowosc (#PCDATA) >
+<!ELEMENT nrnip (#PCDATA) >
+<!ELEMENT nabywca (nazwa, adres, nrnip? ) >
+<!ELEMENT dostawca (nazwa, adres, nrnip? ) >
+<!ELEMENT zamowienie ((pozycja*), wartosccalkowitanetto, wartosccalkowitabrutto, waluta, platnosc)>
+<!ELEMENT pozycja (lp, nazwaartykulu, kodart, ilosc, jm, cenajednostkowabruttoporabacie, stawkaVAT, wartoscVAT, wartoscsprzedazybrutto, kwotapodatku) >
+<!ELEMENT lp (#PCDATA) >
+<!ELEMENT nazwaartykulu (#PCDATA) >
+<!ELEMENT kodart (#PCDATA) >
+<!ELEMENT ilosc (#PCDATA) >
+<!ELEMENT jm (#PCDATA) >
+<!ELEMENT cenajednostkowabruttoporabacie (#PCDATA) >
+<!ELEMENT stawkaVAT (#PCDATA) >
+<!ELEMENT wartoscVAT (#PCDATA) >
+<!ELEMENT wartoscsprzedazybrutto (#PCDATA) >
+<!ELEMENT wartosccalkowitabrutto (#PCDATA) >
+<!ELEMENT kwotapodatku (#PCDATA) >
+<!ELEMENT wartosccalkowitanetto (#PCDATA) >
+<!ELEMENT waluta (#PCDATA) >
+<!ELEMENT platnosc (#PCDATA) >
+
+
+
+<!ATTLIST faktura id ID  #REQUIRED>
+]>
+
+
+<faktury>
+	<faktura id="f1">	
+		<nrzamowienia>0001</nrzamowienia>	
+		<datazamowienia>05.01.2021</datazamowienia>
+		<datawystawienia>07.01.2021</datawystawienia>
+		<fakturaVAT>01/21</fakturaVAT>
+		<sprzedawca>
+			<nazwa>Digesta Polski producent hurtownia przypraw i mieszanek</nazwa>
+		<adres>	
+			<ulica>Sosnowiecka</ulica>
+			<nrbudynku>1</nrbudynku>
+			<nrlokalu></nrlokalu>
+			<kod>40-337</kod>
+			<miejscowosc>Katowice</miejscowosc>
+		</adres>
+		<nrnip>954-000-39-69</nrnip>
+		</sprzedawca>
+		<nabywca>
+				<nazwa>Jan Kowalski</nazwa>
+		<adres>
+				<ulica>Śliczna</ulica>
+				<nrbudynku>1</nrbudynku>
+				<nrlokalu>56</nrlokalu>
+				<kod>31-300</kod>
+				<miejscowosc>Kraków</miejscowosc>
+		</adres>
+				<nrnip>456-456-00-09</nrnip>
+		</nabywca>
+		<dostawca>
+		<nazwa>Jan Kowalski</nazwa>
+		<adres>
+				<ulica>Śliczna</ulica>
+				<nrbudynku>1</nrbudynku>
+				<nrlokalu>56</nrlokalu>
+				<kod>31-300</kod>
+				<miejscowosc>Kraków</miejscowosc>
+		</adres>
+		</dostawca>
+		<zamowienie>
+			<pozycja>
+				<lp>1</lp>
+				<nazwaartykulu>Anyż biedrzeniec</nazwaartykulu>
+				<kodart>3245</kodart>
+				<ilosc>10</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.35</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.11</wartoscVAT>
+				<wartoscsprzedazybrutto>13.50</wartoscsprzedazybrutto>
+				<kwotapodatku>1.08</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>2</lp>
+				<nazwaartykulu>Cebula prażona</nazwaartykulu>
+				<kodart>3844</kodart>
+				<ilosc>5</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>2.53</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.20</wartoscVAT>
+				<wartoscsprzedazybrutto>12.65</wartoscsprzedazybrutto>
+				<kwotapodatku>1.01</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>3</lp>
+				<nazwaartykulu>Bazylia</nazwaartykulu>
+				<kodart>3378</kodart>
+				<ilosc>5</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.10</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.09</wartoscVAT>
+				<wartoscsprzedazybrutto>5.50</wartoscsprzedazybrutto>
+				<kwotapodatku>0.44</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>4</lp>
+				<nazwaartykulu>Goździki mielone</nazwaartykulu>
+				<kodart>3599</kodart>
+				<ilosc>15</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>0.95</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.08</wartoscVAT>
+				<wartoscsprzedazybrutto>14.25</wartoscsprzedazybrutto>
+				<kwotapodatku>1.14</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>5</lp>
+				<nazwaartykulu>Czarnuszka</nazwaartykulu>
+				<kodart>6677</kodart>
+				<ilosc>5</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.29</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.08</wartoscVAT>
+				<wartoscsprzedazybrutto>14.25</wartoscsprzedazybrutto>
+				<kwotapodatku>1.14</kwotapodatku>
+			</pozycja>
+			<wartosccalkowitanetto>4.19</wartosccalkowitanetto>
+			<wartosccalkowitabrutto>52.35</wartosccalkowitabrutto>
+			<waluta>PLN</waluta>
+			<platnosc>szybki przelew</platnosc>
+		</zamowienie>
+	</faktura>
+	<faktura id="f2">	
+		<nrzamowienia>0002</nrzamowienia>	
+		<datazamowienia>07.01.2021</datazamowienia>
+		<datawystawienia>07.01.2021</datawystawienia>
+		<fakturaVAT>02/21</fakturaVAT>
+		<sprzedawca>
+			<nazwa>Digesta Polski producent hurtownia przypraw i mieszanek</nazwa>
+		<adres>	
+			<ulica>Sosnowiecka</ulica>
+			<nrbudynku>1</nrbudynku>
+			<nrlokalu></nrlokalu>
+			<kod>40-337</kod>
+			<miejscowosc>Katowice</miejscowosc>
+		</adres>
+			<nrnip>954-000-39-69</nrnip>
+		</sprzedawca>
+		<nabywca>
+				<nazwa>Anna Nowak</nazwa>
+			<adres>
+				<ulica>Piękna</ulica>
+				<nrbudynku>10</nrbudynku>
+				<nrlokalu>12</nrlokalu>
+				<kod>00-989</kod>
+				<miejscowosc>Warszawa</miejscowosc>
+			</adres>
+				<nrnip>675-657-09-09</nrnip>
+		</nabywca>
+		<dostawca>
+		<nazwa>Anna Nowak</nazwa>
+		<adres>
+				<ulica>Piękna</ulica>
+				<nrbudynku>10</nrbudynku>
+				<nrlokalu>12</nrlokalu>
+				<kod>00-989</kod>
+				<miejscowosc>Warszawa</miejscowosc>
+		</adres>
+		</dostawca>
+		<zamowienie>
+			<pozycja>
+				<lp>1</lp>
+				<nazwaartykulu>Cynamon laska</nazwaartykulu>
+				<kodart>1256</kodart>
+				<ilosc>2</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>12.1</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.97</wartoscVAT>
+				<wartoscsprzedazybrutto>24.20</wartoscsprzedazybrutto>
+				<kwotapodatku>1.94</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>2</lp>
+				<nazwaartykulu>Czystek</nazwaartykulu>
+				<kodart>1187</kodart>
+				<ilosc>1</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.20</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.10</wartoscVAT>
+				<wartoscsprzedazybrutto>1.20</wartoscsprzedazybrutto>
+				<kwotapodatku>0.10</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>3</lp>
+				<nazwaartykulu>Rozmaryn</nazwaartykulu>
+				<kodart>1345</kodart>
+				<ilosc>3</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.25</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.10</wartoscVAT>
+				<wartoscsprzedazybrutto>3.75</wartoscsprzedazybrutto>
+				<kwotapodatku>0.30</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>4</lp>
+				<nazwaartykulu>Imbir mielony</nazwaartykulu>
+				<kodart>3387</kodart>
+				<ilosc>1</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.24</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.10</wartoscVAT>
+				<wartoscsprzedazybrutto>1.24</wartoscsprzedazybrutto>
+				<kwotapodatku>0.10</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>5</lp>
+				<nazwaartykulu>Ziele angielskie</nazwaartykulu>
+				<kodart>8787</kodart>
+				<ilosc>1</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>10.91</cenajednostkowabruttoporabacie>
+				<stawkaVAT>8%</stawkaVAT>
+				<wartoscVAT>0.87</wartoscVAT>
+				<wartoscsprzedazybrutto>10.91</wartoscsprzedazybrutto>
+				<kwotapodatku>0.87</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>6</lp>
+				<nazwaartykulu>Żelatyna spożywcza</nazwaartykulu>
+				<kodart>9877</kodart>
+				<ilosc>1</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>9.64</cenajednostkowabruttoporabacie>
+				<stawkaVAT>23%</stawkaVAT>
+				<wartoscVAT>2.22</wartoscVAT>
+				<wartoscsprzedazybrutto>9.64</wartoscsprzedazybrutto>
+				<kwotapodatku>2.22</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>7</lp>
+				<nazwaartykulu>Papryka czerwona z dymem</nazwaartykulu>
+				<kodart>1222</kodart>
+				<ilosc>3</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>1.51</cenajednostkowabruttoporabacie>
+				<stawkaVAT>23%</stawkaVAT>
+				<wartoscVAT>0.35</wartoscVAT>
+				<wartoscsprzedazybrutto>4.53</wartoscsprzedazybrutto>
+				<kwotapodatku>1.05</kwotapodatku>
+			</pozycja>
+			<pozycja>
+				<lp>8</lp>
+				<nazwaartykulu>Pieprz cytrynowy</nazwaartykulu>
+				<kodart>1223</kodart>
+				<ilosc>3</ilosc>
+				<jm>szt</jm>
+				<cenajednostkowabruttoporabacie>0.98</cenajednostkowabruttoporabacie>
+				<stawkaVAT>23%</stawkaVAT>
+				<wartoscVAT>0.23</wartoscVAT>
+				<wartoscsprzedazybrutto>2.94</wartoscsprzedazybrutto>
+				<kwotapodatku>0.68</kwotapodatku>
+			</pozycja>
+			<wartosccalkowitanetto>7.25</wartosccalkowitanetto>
+			<wartosccalkowitabrutto>58.42</wartosccalkowitabrutto>
+			<waluta>PLN</waluta>
+			<platnosc>karta kredytowa</platnosc>
+		</zamowienie>
+	</faktura>
+	</faktury>
